@@ -1,4 +1,4 @@
-FROM dokken/ubuntu-20.04
+FROM centos:7
 RUN apt update
 RUN apt install nodejs -y
 RUN apt install npm -y
