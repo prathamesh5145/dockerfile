@@ -1,4 +1,6 @@
 FROM centos:7
+ADD https://rpm.nodesource.com/setup_14.x /
+RUN bash
 RUN yum install -y nodejs
 COPY devops-fullstack-app /
 WORKDIR /devops-fullstack-app/frontend/
