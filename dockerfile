@@ -1,9 +1,7 @@
-FROM homebrew/ubuntu20.04
-ADD https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh ./
-RUN https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+FROM centos:7
+RUN curl -sL https://rpm.nodesource.com/setup_14.x bash
 RUN source ~/.bashrc
-RUN nvm install v14.17.0
-RUN nvm use v14.17.0
+RUN yum install -y nodejs
 COPY devops-fullstack-app /
 WORKDIR /devops-fullstack-app/frontend/
 EXPOSE 3000
