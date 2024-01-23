@@ -1,5 +1,5 @@
 FROM centos:7
-RUN yum update
+RUN curl -sL https://rpm.nodesource.com/setup_14.x | bash -
 RUN yum install nodejs -y
 RUN yum install npm -y
 RUN yum -y install curl git
