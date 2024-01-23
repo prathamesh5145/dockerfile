@@ -1,6 +1,8 @@
 FROM centos:7
-RUN curl –sL https://rpm.nodesource.com/setup_10.x | sudo bash -
-RUN sudo yum install -y nodejs
+RUN sudo apt install curl
+RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+RUN nvm install 14.17.0
+RUN nvm use 14.17.0
 COPY devops-fullstack-app /
 WORKDIR /devops-fullstack-app/frontend/
 EXPOSE 3000
