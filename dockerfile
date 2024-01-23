@@ -1,4 +1,4 @@
-FROM centos:7
+FROM homebrew/ubuntu20.04
 ADD https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh ./
 RUN https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 RUN source ~/.bashrc
